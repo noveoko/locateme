@@ -113,7 +113,7 @@ Ludomir
 Mieczysław
 Stamira
 Otniel
-Mieczysława Ćwiklińska
+Mieczysława
 Dargosława
 Emma
 Hermina
@@ -133,7 +133,7 @@ Bogusław
 Władysława
 Chociemir
 Sławomira
-Andrzej Żuławski
+Andrzej
 Maurycjusz
 Bogdan
 Gabor
@@ -516,7 +516,7 @@ Małgorzata
 Dal
 Pelagia
 Mirosz
-Artur Żmijewski
+Artur
 Adam
 Mirołada
 Cina
@@ -658,7 +658,7 @@ Jozafat
 Justyna
 Rajmund
 Herma
-Henryk Łubieński
+Henryk
 Wioletta
 Beata
 Derwit
@@ -718,7 +718,6 @@ Karima
 Rejna
 Karol
 Cyryl
-Imiona męskie
 Machut
 Berenika
 Delinda
@@ -794,7 +793,7 @@ Roch
 Marzanna
 Jarosława
 Gwidon
-Michał Żebrowski
+Michał
 Ewaryst
 Hermenegilda
 Stoisław
@@ -1030,7 +1029,7 @@ Alana
 Beniamin
 Klarysa
 Bolebor
-Tadeusz Łomnicki
+Tadeusz
 Leon
 Petra
 Tytus
