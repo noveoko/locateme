@@ -6,7 +6,7 @@ import locale
 locale.setlocale(locale.LC_ALL, '') 
 
 PATH_TO_NAMES = 'usa_last_names.txt'
-NEW_NAMES_TO_GENERATE = 100000
+NEW_NAMES_TO_GENERATE = 1000000
 
 def naive_text_generation(path_to_file=PATH_TO_NAMES, new_names_to_generate=NEW_NAMES_TO_GENERATE):
     #start time
@@ -82,6 +82,9 @@ if __name__ == '__main__':
     multiprocessing.freeze_support()
     fake_names = naive_text_generation()
     with open('generated_last_names.txt','w') as f:
-        # chunks of 100 names each per line
-        for i in range(0, len(fake_names), 100):
-            f.write('|'.join(fake_names[i:i+100])+'\n')
+        #one name per line
+        for name in fake_names:
+            f.write(name.title() + '\n')
+        # # chunks of 100 names each per line
+        # for i in range(0, len(fake_names), 100):
+        #     f.write('|'.join(fake_names[i:i+100])+'\n')
