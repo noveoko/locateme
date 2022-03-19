@@ -1,7 +1,7 @@
 from glob import glob
 import re
 
-files = [a for a in glob("data/**/*", recursive=True)if a.endswith(".csv") or a.endswith(".txt") and "last" in a]
+files = [a for a in glob("data/us_census/**/*", recursive=True)if a.endswith(".csv") or a.endswith(".txt") and "last" in a]
 
 unique_names = set()
 

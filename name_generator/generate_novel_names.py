@@ -24,6 +24,7 @@ def naive_text_generation(path_to_file=PATH_TO_NAMES, new_names_to_generate=NEW_
     ready_to_use = {a:ready_to_use[count] for count, a in enumerate(["start","mid","end"])}
     # random choice based on probability
     while len(generated_last_names) < new_names_to_generate:
+        print("Current time: ", time()-start, end='\r')
         #use multiprocessing to speed up generation
         pool = multiprocessing.Pool(processes=multiprocessing.cpu_count())
         result = pool.map(generate_name, [ready_to_use for _ in range(new_names_to_generate)])
@@ -31,9 +32,9 @@ def naive_text_generation(path_to_file=PATH_TO_NAMES, new_names_to_generate=NEW_
         pool.join()
         for name in result:
             generated_last_names.add(name)
-        print("Generated {} names".format(len(generated_last_names)))
     else:
         #kill pool
+        print("Generated {} names".format(len(generated_last_names)))
         pool.terminate()
     #end time
     end = time()
@@ -81,10 +82,7 @@ def generate_parts(real_last_names):
 if __name__ == '__main__':
     multiprocessing.freeze_support()
     fake_names = naive_text_generation()
-    with open('generated_last_names.txt','w') as f:
+    with open('generated_data/generated_last_names_2.txt','w') as f:
         #one name per line
         for name in fake_names:
             f.write(name.title() + '\n')
-        # # chunks of 100 names each per line
-        # for i in range(0, len(fake_names), 100):
-        #     f.write('|'.join(fake_names[i:i+100])+'\n')
