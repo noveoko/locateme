@@ -48,18 +48,14 @@ def get_next_word():
     with open(PATH_TO_WIKIPEDIA_DUMP, 'r', encoding='utf-8') as f:
         while True:
             xml = f.read(50000)
-            pages = xml.split('<page>')
-            for page in pages:
-                #parse page using bs4
-                soup = bs(page, 'lxml')
-                #get words from page
-                text_blob = soup.get_text()
-                single_words = [a.lower() for a in re.compile(r"[A-Za-zÀ-ÖØ-öø-ÿ]+").findall(text_blob)]
-                for word in single_words:
-                    if len(word) > MAX_LEN_OF_WORD or len(word) < MIN_LEN_OF_WORD:
-                        continue
-                    processed += 1
-                    yield word, processed
+            soup = bs(xml, 'lxml')
+            blob = soup.get_text()
+            single_words = [a.lower() for a in re.compile(r"[A-Za-zÀ-ÖØ-öø-ÿ]+").findall(blob)]
+            for word in single_words:
+                if len(word) > MAX_LEN_OF_WORD or len(word) < MIN_LEN_OF_WORD:
+                    continue
+                processed += 1
+                yield word, processed
 
 
 def print_first_500_words_in_database():
@@ -67,13 +63,13 @@ def print_first_500_words_in_database():
     print(c.fetchall())
 
 k = get_next_word()
-max_size = 1000
+max_size = 100000
 common_len = 2500
-unique_words_to_get = 500000
+unique_words_to_get = 600000
 
 words_already_added = set()
 
-with open('wikipedia_300k_top_words.txt', 'r',encoding='utf-8') as f:
+with open('wikipedia_500k_words.txt', 'r',encoding='utf-8') as f:
     unique_words = [words_already_added.add(a.strip()) for a in f.readlines()]
     
 #using multiprocessing
