@@ -14,3 +14,8 @@ https://www.wbc.poznan.pl/dlibra/text?id=addressbuch
 Lodz Archive
 
 * 636 85 35 (12)
+
+
+## Zero Shot Classification
+
+[facebook/bart_large_mli](facebook/bart_large_mli)
