@@ -21,3 +21,7 @@ Years 1900-1950 are given when no year is listed and years ending in 2025 are fo
 ```bash
 sqlite3 locateme.db "create table people(name text, link text, start text, end text, country text);"
 ```
+
+Datasets used
+
+https://simplemaps.com/data/world-cities
