@@ -25,3 +25,6 @@ sqlite3 locateme.db "create table people(name text, link text, start text, end t
 Datasets used
 
 https://simplemaps.com/data/world-cities
+
+## Useful utilities
+https://github.com/noveoko/locateme/blob/master/utilities/Recursive_Person_Extractor.ipynb
