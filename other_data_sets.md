@@ -1,5 +1,9 @@
 # Links
 
+## Massive Biographical Dataset Extracted from Multiple Wikipedia Versions
+
+[2.5 Million person biographies (Wikipedia)](https://data.sciencespo.fr/dataset.xhtml?persistentId=doi:10.21410/7E4/RDAG3O)
+
 ### Giant List of Phone/Address Books
 
 https://www.wbc.poznan.pl/dlibra/text?id=addressbuch
